@@ -9,10 +9,10 @@ trait ManagerPerson:
   def viewPersons(): Unit
 
 class ManagerArrayPerson() extends ManagerPerson:
-  var people: List[PersonModel] = List[PersonModel]()
+  var people: Vector[PersonModel] = Vector[PersonModel]()
 
   def createPerson(person: PersonModel): Unit =
-    people = person :: people
+    people = people :+ person
 
   def viewPersons(): Unit =
     people.foreach((element) => println(s"Name:  ${element.name} --- Age: ${element.age}"))
