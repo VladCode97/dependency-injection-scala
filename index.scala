@@ -9,7 +9,7 @@ trait ManagerPerson:
   def viewPersons(): Unit
 
 class ManagerArrayPerson() extends ManagerPerson:
-  var people: Vector[PersonModel] = Vector[PersonModel]()
+  private var people: Vector[PersonModel] = Vector[PersonModel]()
 
   def createPerson(person: PersonModel): Unit =
     people = people :+ person
